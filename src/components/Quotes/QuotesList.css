@@ -1,0 +1,119 @@
+/* QuotesList uchun rangli va jozibali dizayn */
+
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --accent-color: #e74c3c;
+  --background-color: #ecf0f1;
+  --text-color: #2c3e50;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+.quotes-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.quotes-title {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quotes-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.quote-item {
+  background: linear-gradient(45deg, #ffffff, #f9f9f9);
+  border: none;
+  border-radius: 10px;
+  padding: 25px;
+  margin: 20px 0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.quote-item::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  font-size: 100px;
+  color: rgba(52, 152, 219, 0.1);
+  font-family: Georgia, serif;
+}
+
+.quote-item:hover {
+  transform: translateY(-5px) rotate(1deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(45deg, #f1f8ff, #e6f3ff);
+}
+
+.quote-item:active {
+  transform: translateY(0) rotate(0);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.quote-text {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.quote-author {
+  text-align: right;
+  font-style: italic;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.quote-item:nth-child(odd) {
+  border-left: 5px solid var(--primary-color);
+}
+
+.quote-item:nth-child(even) {
+  border-right: 5px solid var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .quotes-container {
+    padding: 20px;
+  }
+  
+  .quotes-title {
+    font-size: 2em;
+  }
+  
+  .quote-item {
+    padding: 20px;
+  }
+}
+
+@keyframes colorChange {
+  0% { color: var(--primary-color); }
+  50% { color: var(--secondary-color); }
+  100% { color: var(--primary-color); }
+}
+
+.quotes-title:hover {
+  animation: colorChange 3s infinite;
+}

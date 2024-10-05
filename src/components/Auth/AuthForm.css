@@ -1,0 +1,78 @@
+.auth-form {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f8f9fa; /* Light background */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form h2 {
+  text-align: center;
+  color: #6f42c1; /* Purple color for headings */
+  margin-bottom: 25px;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.75em; /* Slightly larger font size */
+  text-transform: uppercase; /* Uppercase for emphasis */
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #495057;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+}
+
+.auth-input:hover,
+.auth-input:focus {
+  border-color: #198754; /* Green border on focus */
+  box-shadow: 0 0 5px rgba(25, 135, 84, 0.5); /* Green shadow on focus */
+  outline: none;
+}
+
+.auth-button {
+  width: 100%; 
+  padding: 12px; 
+  background-color: #007bff; /* Primary color */
+  color: white; 
+  border: none; 
+  border-radius: 6px; 
+  cursor: pointer; 
+  transition: background-color 0.3s, transform 0.3s; 
+  font-weight: bold; 
+}
+
+.auth-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 2px 15px rgba(0, 123, 255, 0.4); 
+}
+
+.auth-button:active {
+  transform: scale(0.95); 
+}
+
+.error {
+  color: #dc3545; /* Bootstrap danger color */
+  font-size: 0.875em;
+  margin-top: 5px; 
+}
+
+.message {
+  text-align: center;
+  margin-top: 30px; 
+  font-weight: bold;
+  color: #28a745; /* Success color */
+}
