@@ -8,6 +8,7 @@ const QuotesList: React.FC = () => {
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error</div>;
 
+  
   return (
     <div className="quotes-container">
       <h2 className="quotes-title">Quotes</h2>
